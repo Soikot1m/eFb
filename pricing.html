@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing • eFootball AI Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <a href="index.html" class="inline-flex items-center gap-x-2 text-emerald-400 hover:text-emerald-300 mb-6">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+            <h1 class="text-5xl font-bold tracking-tight">Choose your plan</h1>
+            <p class="text-xl text-slate-400 mt-3">Unlock unlimited access to the best eFootball AI Coach</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            
+            <!-- Free Plan -->
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 flex flex-col">
+                <div class="mb-6">
+                    <div class="text-emerald-400 font-semibold">FREE</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-bold">৳0</span>
+                        <span class="text-slate-400 ml-2">/month</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-4 text-sm flex-1">
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>50 messages / month</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Basic eFootball Coach mode</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Text-based squad analysis</span></li>
+                    <li class="flex items-start gap-x-3 text-slate-500"><i class="fa-solid fa-times mt-1"></i> <span>Screenshot upload</span></li>
+                    <li class="flex items-start gap-x-3 text-slate-500"><i class="fa-solid fa-times mt-1"></i> <span>Multiple AI modes</span></li>
+                </ul>
+                
+                <button class="mt-8 w-full py-3 border border-slate-600 rounded-2xl font-semibold hover:bg-slate-800 transition-colors">
+                    Current Plan
+                </button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="bg-slate-900 border-2 border-emerald-500 rounded-3xl p-8 flex flex-col relative">
+                <div class="absolute -top-3 right-6 bg-emerald-500 text-slate-950 text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+                
+                <div class="mb-6">
+                    <div class="text-emerald-400 font-semibold">PRO</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-bold">৳299</span>
+                        <span class="text-slate-400 ml-2">/month</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-4 text-sm flex-1">
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span><strong>Unlimited</strong> messages</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>All AI modes (Coach, Tactics, General)</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Screenshot upload &amp; analysis</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Priority response speed</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Chat history save</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Early access to new features</span></li>
+                </ul>
+                
+                <button onclick="subscribeToPlan('pro')"
+                        class="mt-8 w-full py-3 bg-emerald-500 hover:bg-emerald-600 transition-all text-slate-950 font-bold rounded-2xl">
+                    Upgrade to Pro
+                </button>
+            </div>
+
+            <!-- Team / Coach Plan -->
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 flex flex-col">
+                <div class="mb-6">
+                    <div class="text-emerald-400 font-semibold">TEAM / COACH</div>
+                    <div class="mt-4 flex items-baseline">
+                        <span class="text-5xl font-bold">৳799</span>
+                        <span class="text-slate-400 ml-2">/month</span>
+                    </div>
+                </div>
+                
+                <ul class="space-y-4 text-sm flex-1">
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Everything in Pro</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Up to 5 team members</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Shared squad database</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Custom prompt templates</span></li>
+                    <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> <span>Priority support</span></li>
+                </ul>
+                
+                <button onclick="subscribeToPlan('team')"
+                        class="mt-8 w-full py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 transition-all font-semibold rounded-2xl">
+                    Contact for Team
+                </button>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 text-sm text-slate-500">
+            All plans come with 7-day money-back guarantee. Cancel anytime.
+        </div>
+    </div>
+
+    <script>
+        function subscribeToPlan(plan) {
+            if (plan === 'pro') {
+                alert('Pro plan selected! (Demo)\nReal payment integration (Stripe) পরে add করা হবে।');
+            } else {
+                alert('Team plan selected! Please contact support@efootballai.com');
+            }
+        }
+    </script>
+</body>
+</html>
