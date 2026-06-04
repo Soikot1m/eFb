@@ -11,7 +11,11 @@ app = FastAPI(title="eFootball AI Coach Website")
 # Mount static files if needed later
 # app.mount("/static", StaticFiles(directory="static"), name="static")
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# ==================== GROQ API KEY ====================
+GROQ_API_KEY = "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"
+
+client = Groq(api_key=GROQ_API_KEY)
+# =====================================================
 
 SYSTEM_PROMPT = """You are "eFootball Guru" — expert eFootball 2025/2026 coach. 
 Give detailed, actionable advice on formations, players, tactics. 
